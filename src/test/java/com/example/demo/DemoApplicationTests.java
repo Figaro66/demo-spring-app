@@ -10,7 +10,7 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		log.info("YOU ARE IN THE TEST");
+		log.info("PLACEHOLDER FOR MEANINGFUL TESTS");
 	}
 
 }
