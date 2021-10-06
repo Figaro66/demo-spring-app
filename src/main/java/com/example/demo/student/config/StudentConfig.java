@@ -5,6 +5,7 @@ import com.example.demo.student.model.Student;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.List;
 import static java.time.Month.JANUARY;
 
 @Configuration
+@Import(SwaggerConfig.class)
 public class StudentConfig {
 
     @Bean

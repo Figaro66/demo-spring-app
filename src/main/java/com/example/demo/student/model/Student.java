@@ -1,5 +1,7 @@
 package com.example.demo.student.model;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +13,7 @@ import java.time.Period;
 @Table
 @Data
 @NoArgsConstructor
+@ApiModel(description = "Details about the students")
 public class Student {
     @Id
     @SequenceGenerator(
@@ -22,10 +25,15 @@ public class Student {
             strategy = GenerationType.SEQUENCE,
             generator = "student_sequence"
     )
+    @ApiModelProperty(value = "The unique id of a student")
     Long id;
+    @ApiModelProperty(value = "The student's name")
     String name;
+    @ApiModelProperty(value = "The student's email")
     String email;
+    @ApiModelProperty(value = "The student's date of birth in format yyyy-MM-dd")
     LocalDate dob;
+    @ApiModelProperty(value = "The student's age")
     @Transient
     Integer age;
 
